@@ -2,8 +2,10 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<!-- Consent Mode v2: tudo negado por padrão (LGPD) -->
 <script>
+  document.documentElement.classList.add('js');
+  // Consent Mode v2: tudo negado por padrão (LGPD). A escolha do aviso de cookies vale para
+  // o Google Analytics e para a medição de conversões do Google Ads (sem personalização de anúncios).
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('consent', 'default', {
@@ -12,12 +14,17 @@
     'ad_personalization': 'denied',
     'analytics_storage': 'denied'
   });
+  gtag('set', 'ads_data_redaction', true);
   (function(){
     try {
       var c = JSON.parse(localStorage.getItem('tc-consent'));
-      if (c && c.v === 1 && c.analytics === 'granted' && typeof c.ts === 'number' &&
+      if (c && c.v === 2 && c.analytics === 'granted' && typeof c.ts === 'number' &&
           c.ts <= Date.now() && Date.now() - c.ts < 31536e6) {
-        gtag('consent', 'update', {'analytics_storage': 'granted'});
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted',
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted'
+        });
       }
     } catch (e) {}
   })();
@@ -30,29 +37,44 @@
   gtag('js', new Date());
   gtag('config', 'G-N5ERXBJJ00');
 </script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Registro de marca estrangeira no Brasil: guia prático</title>
 <meta name="description" content="Empresa estrangeira pode registrar marca no Brasil, mas a lei exige procurador domiciliado no país. Veja as duas vias e os prazos.">
+<link rel="canonical" href="https://chadarevian.adv.br/artigos/registro-de-marca-estrangeira-no-brasil.html">
+<link rel="alternate" hreflang="pt-BR" href="https://chadarevian.adv.br/artigos/registro-de-marca-estrangeira-no-brasil.html">
+<link rel="alternate" hreflang="en" href="https://chadarevian.adv.br/en/articles/trademark-registration-brazil-foreign-companies.html">
 <meta name="theme-color" content="#0f2440">
-<link rel="icon" href="../assets/logo.png">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta property="og:site_name" content="Tiago Chadarevian">
 <meta property="og:title" content="Registro de marca estrangeira no Brasil: guia prático">
 <meta property="og:description" content="Empresa estrangeira pode registrar marca no Brasil, mas a lei exige procurador domiciliado no país. Veja as duas vias e os prazos.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://chadarevian.adv.br/artigos/registro-de-marca-estrangeira-no-brasil.html">
+<meta property="og:image" content="https://chadarevian.adv.br/assets/og/registro-de-marca-estrangeira-no-brasil.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Registro de marca estrangeira no Brasil: guia prático">
 <meta property="og:locale" content="pt_BR">
-<link rel="canonical" href="https://chadarevian.adv.br/artigos/registro-de-marca-estrangeira-no-brasil.html">
-<link rel="alternate" hreflang="pt-BR" href="https://chadarevian.adv.br/artigos/registro-de-marca-estrangeira-no-brasil.html">
-<link rel="alternate" hreflang="en" href="https://chadarevian.adv.br/en/articles/trademark-registration-brazil-foreign-companies.html">
-<link rel="stylesheet" href="../assets/estilo.css">
-<link rel="stylesheet" href="../assets/cookies.css">
-<script src="../assets/cookies.js" defer></script>
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"Article","headline":"Registro de marca estrangeira no Brasil","name":"Registro de marca estrangeira no Brasil: o que uma empresa de fora precisa saber","description":"Empresa estrangeira pode registrar marca no Brasil, mas a lei exige procurador domiciliado no país. Veja as duas vias e os prazos.","image":"https://chadarevian.adv.br/assets/logo.png","inLanguage":"pt-BR","datePublished":"2026-09-30","dateModified":"2026-09-30","mainEntityOfPage":{"@type":"WebPage","@id":"https://chadarevian.adv.br/artigos/registro-de-marca-estrangeira-no-brasil.html"},"author":{"@type":"Person","name":"Tiago Chadarevian","jobTitle":"Advogado","url":"https://chadarevian.adv.br/"},"publisher":{"@type":"Person","name":"Tiago Chadarevian","url":"https://chadarevian.adv.br/"},"articleSection":"Propriedade Intelectual"},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Preciso ter empresa ou filial no Brasil para registrar minha marca?","acceptedAnswer":{"@type":"Answer","text":"Não. Não é exigido CNPJ, filial nem operação local. O que a lei exige é procurador domiciliado no Brasil, nos termos do art. 217 da LPI."}},{"@type":"Question","name":"Meu registro de marca no exterior já protege a marca no Brasil?","acceptedAnswer":{"@type":"Answer","text":"Não. A proteção é territorial: o registro obtido no exterior não produz efeito no Brasil. É preciso registrar aqui, pela via nacional ou designando o Brasil no Protocolo de Madri."}},{"@type":"Question","name":"Se eu usar a marca no Brasil sem registrar, tenho algum direito?","acceptedAnswer":{"@type":"Answer","text":"A posição é frágil. O sistema brasileiro atribui a propriedade da marca a quem registra, e não a quem usa primeiro, salvo hipóteses excepcionais de prova difícil."}},{"@type":"Question","name":"Usando o Protocolo de Madri, ainda preciso de advogado no Brasil?","acceptedAnswer":{"@type":"Answer","text":"Para designar o Brasil, não. Mas para responder a exigência, defender-se de oposição ou recorrer, sim: o art. 217 exige procurador domiciliado no país."}},{"@type":"Question","name":"O que acontece se eu não pagar as retribuições depois do deferimento?","acceptedAnswer":{"@type":"Answer","text":"O pedido é arquivado definitivamente. O prazo é de 60 dias a contar do deferimento, com período extraordinário de 30 dias mediante retribuição específica."}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://chadarevian.adv.br/"},{"@type":"ListItem","position":2,"name":"Artigos","item":"https://chadarevian.adv.br/artigos/"},{"@type":"ListItem","position":3,"name":"Registro de marca estrangeira no Brasil","item":"https://chadarevian.adv.br/artigos/registro-de-marca-estrangeira-no-brasil.html"}]}]</script>
+<meta property="og:locale:alternate" content="en_US">
+<meta property="article:published_time" content="2026-09-30">
+<meta property="article:modified_time" content="2026-10-20">
+<meta property="article:section" content="Propriedade Intelectual">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="../fonts/playfair-display-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/inter-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/estilo.css?v=20261020">
+<script src="../assets/cookies.js?v=20261020" defer></script>
+<script src="../assets/site.js?v=20261020" defer></script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"Article","headline":"Registro de marca estrangeira no Brasil","name":"Registro de marca estrangeira no Brasil: o que uma empresa de fora precisa saber","description":"Empresa estrangeira pode registrar marca no Brasil, mas a lei exige procurador domiciliado no país. Veja as duas vias e os prazos.","image":["https://chadarevian.adv.br/assets/og/registro-de-marca-estrangeira-no-brasil.jpg"],"inLanguage":"pt-BR","datePublished":"2026-09-30","dateModified":"2026-10-20","mainEntityOfPage":{"@type":"WebPage","@id":"https://chadarevian.adv.br/artigos/registro-de-marca-estrangeira-no-brasil.html"},"author":{"@type":"Person","@id":"https://chadarevian.adv.br/#tiago","name":"Tiago Chadarevian","jobTitle":"Advogado","url":"https://chadarevian.adv.br/#sobre"},"publisher":{"@type":"Organization","name":"Tiago Chadarevian Sociedade Individual de Advocacia","url":"https://chadarevian.adv.br/","logo":{"@type":"ImageObject","url":"https://chadarevian.adv.br/assets/logo.png","width":556,"height":94}},"articleSection":"Propriedade Intelectual"},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Preciso ter empresa ou filial no Brasil para registrar minha marca?","acceptedAnswer":{"@type":"Answer","text":"Não. Não é exigido CNPJ, filial nem operação local. O que a lei exige é procurador domiciliado no Brasil, nos termos do art. 217 da LPI."}},{"@type":"Question","name":"Meu registro de marca no exterior já protege a marca no Brasil?","acceptedAnswer":{"@type":"Answer","text":"Não. A proteção é territorial: o registro obtido no exterior não produz efeito no Brasil. É preciso registrar aqui, pela via nacional ou designando o Brasil no Protocolo de Madri."}},{"@type":"Question","name":"Se eu usar a marca no Brasil sem registrar, tenho algum direito?","acceptedAnswer":{"@type":"Answer","text":"A posição é frágil. O sistema brasileiro atribui a propriedade da marca a quem registra, e não a quem usa primeiro, salvo hipóteses excepcionais de prova difícil."}},{"@type":"Question","name":"Usando o Protocolo de Madri, ainda preciso de advogado no Brasil?","acceptedAnswer":{"@type":"Answer","text":"Para designar o Brasil, não. Mas para responder a exigência, defender-se de oposição ou recorrer, sim: o art. 217 exige procurador domiciliado no país."}},{"@type":"Question","name":"Ainda é preciso pagar alguma taxa depois do deferimento?","acceptedAnswer":{"@type":"Answer","text":"Não, para pedidos deferidos a partir de 24 de junho de 2025: a concessão passou a ser automática, e a taxa do primeiro decênio foi zerada. Os prazos que exigem atenção são os de exigência, oposição e recurso, todos de 60 dias contados da publicação."}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://chadarevian.adv.br/"},{"@type":"ListItem","position":2,"name":"Artigos","item":"https://chadarevian.adv.br/artigos/"},{"@type":"ListItem","position":3,"name":"Registro de marca estrangeira no Brasil","item":"https://chadarevian.adv.br/artigos/registro-de-marca-estrangeira-no-brasil.html"}]}]</script>
 </head>
 <body>
 
 <header class="hdr" id="hdr">
   <div class="hdr__in">
-    <a class="brand" href="../index.html" aria-label="Tiago Chadarevian, Advogado">
+    <a class="brand" href="../" aria-label="Tiago Chadarevian, Advogado">
       <img class="on-dark" src="../assets/logo-clara.png" alt="Tiago Chadarevian Advogado" width="556" height="94">
       <img class="on-light" src="../assets/logo.png" alt="" aria-hidden="true" width="556" height="94">
     </a>
@@ -60,11 +82,11 @@
       <span></span><span></span><span></span>
     </button>
     <nav class="nav" id="nav">
-      <a href="../index.html#areas">Áreas de Atuação</a>
-      <a href="../index.html#sobre">Sobre</a>
-      <a href="../index.html#formacao">Formação</a>
-      <a href="../artigos/index.html">Artigos</a>
-      <a href="../index.html#contato">Contato</a>
+      <a href="../#areas">Áreas de Atuação</a>
+      <a href="../#sobre">Sobre</a>
+      <a href="../#formacao">Formação</a>
+      <a href="./">Artigos</a>
+      <a href="../#contato">Contato</a>
       <a href="https://wa.me/5511925301848" target="_blank" rel="noopener">Fale no WhatsApp</a>
       <div class="lang" role="group" aria-label="Idioma do site">
         <span class="is-on" aria-current="true">PT</span>
@@ -81,17 +103,18 @@
     <div class="wrap">
       <div class="art-hero__in">
         <nav class="crumb" aria-label="Você está em">
-          <a href="../index.html">Início</a>
+          <a href="../">Início</a>
           <span aria-hidden="true">/</span>
-          <a href="index.html">Artigos</a>
+          <a href="./">Artigos</a>
           <span aria-hidden="true">/</span>
           <span>Propriedade Intelectual</span>
         </nav>
         <h1>Registro de marca estrangeira no Brasil: o que uma empresa de fora precisa saber</h1>
-        <p class="art-lead">A empresa estrangeira tem os mesmos direitos do titular brasileiro, mas a lei exige que ela mantenha um procurador domiciliado no Brasil, e há um prazo que faz muita marca deferida ser perdida por descuido.</p>
+        <p class="art-lead">A empresa estrangeira tem os mesmos direitos do titular brasileiro, mas a lei exige que ela mantenha um procurador domiciliado no Brasil, e os prazos do processo correm sem aviso pessoal ao titular.</p>
         <div class="art-meta">
           <span><strong>Tiago Chadarevian</strong>, OAB/SP 549.252</span>
           <span>Setembro de 2026</span>
+          <span>Atualizado em outubro de 2026</span>
           <span>8 min de leitura</span>
         </div>
       </div>
@@ -103,8 +126,7 @@
       <div class="prose">
 <p><strong>Uma empresa sediada no exterior pode, sim, registrar sua marca no Brasil</strong>, e com
 os mesmos direitos de um titular brasileiro. O que muda é o caminho até lá: existe uma exigência
-legal que não tem como ser contornada, duas vias possíveis de entrada e um prazo pós-deferimento
-que derruba marcas já aprovadas todos os anos.</p>
+legal que não tem como ser contornada, duas vias possíveis de entrada e prazos curtos, que correm sem aviso pessoal ao titular.</p>
 
 <p>Trato dos três abaixo, na ordem em que aparecem na prática.</p>
 
@@ -184,23 +206,22 @@ titular estrangeiro. Passados os seis meses, o benefício se perde e não há co
   <li><strong>Exame de mérito.</strong> O INPI analisa se a marca é registrável: se não é
   genérica, se não conflita com marca anterior, se não recai em vedação legal.</li>
   <li><strong>Decisão.</strong> O pedido é deferido ou indeferido. Do indeferimento cabe recurso.</li>
-  <li><strong>Concessão.</strong> Deferido o pedido, passa a correr o prazo de pagamento tratado a
-  seguir, após o qual é expedido o certificado.</li>
+  <li><strong>Concessão.</strong> Para pedidos deferidos a partir de 24 de junho de 2025, a
+  concessão é automática, sem nova taxa, e o certificado é expedido em formato digital.</li>
 </ol>
 
-<h2>O prazo que mais faz marca ser perdida</h2>
+<h2>Os prazos que mais fazem marca ser perdida</h2>
 
-<p>Muita gente acredita que o deferimento encerra o processo. Não encerra. Pelo <strong>art. 162 da
-LPI</strong>, as retribuições relativas à expedição do certificado e ao primeiro decênio de
-vigência devem ser pagas e comprovadas <strong>no prazo de 60 dias contados do deferimento</strong>.
-Há ainda um prazo extraordinário de 30 dias, mediante retribuição específica e independentemente de
-notificação. Esgotado esse segundo prazo sem pagamento, o pedido é <strong>definitivamente
-arquivado</strong>.</p>
+<p>Até 2025, o maior risco vinha depois do deferimento: era preciso pagar a taxa de concessão em 60
+dias, sob pena de arquivamento do pedido (art. 162 da LPI). Isso mudou. Para pedidos deferidos a
+partir de <strong>24 de junho de 2025</strong>, a concessão passou a ser automática, e a nova tabela
+do INPI zerou a taxa do primeiro decênio de vigência.</p>
 
-<p>É um desfecho particularmente cruel: a marca foi aprovada, superou o exame e a eventual
-oposição, e se perde por um prazo administrativo. Para o titular estrangeiro o risco é maior, porque
-a contagem começa com a publicação na Revista, e sem procurador acompanhando as publicações
-ninguém no exterior é avisado.</p>
+<p>O risco agora está nos prazos que correm durante o exame: <strong>60 dias</strong> para cumprir
+exigência, sob pena de arquivamento definitivo (art. 159), 60 dias para responder à oposição de
+terceiro e 60 dias para recorrer do indeferimento (art. 212). Todos contam da publicação na Revista
+da Propriedade Industrial, sem aviso pessoal. Para o titular estrangeiro, o risco é maior: sem
+procurador acompanhando as publicações, ninguém no exterior é avisado.</p>
 
 <h2>Por quanto tempo vale o registro</h2>
 
@@ -234,9 +255,10 @@ retribuição suplementar. Depois disso, o registro se extingue.</p>
     recorrer, sim: o art. 217 exige procurador domiciliado no país, e esses prazos são curtos.</p>
   </div>
   <div class="faq__i">
-    <p class="faq__q">O que acontece se eu não pagar depois do deferimento?</p>
-    <p>O pedido é arquivado definitivamente. O prazo é de 60 dias a contar do deferimento, com um
-    período extraordinário de 30 dias mediante retribuição específica.</p>
+    <p class="faq__q">Ainda é preciso pagar alguma taxa depois do deferimento?</p>
+    <p>Não, para pedidos deferidos a partir de 24 de junho de 2025: a concessão passou a ser automática,
+    e a taxa do primeiro decênio foi zerada. Os prazos que exigem atenção são os de exigência, oposição
+    e recurso, todos de 60 dias contados da publicação.</p>
   </div>
 </div>
 
@@ -244,10 +266,18 @@ retribuição suplementar. Depois disso, o registro se extingue.</p>
           <h2>Está passando por isso?</h2>
           <p>Cada caso depende dos documentos e das provas disponíveis. Se a situação descrita aqui é parecida com a sua, converse comigo para entender quais caminhos existem no seu caso concreto.</p>
           <div class="art-cta__btns">
-            <a class="btn btn--brass" href="https://wa.me/5511925301848" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.2 7.5L3.5 20.5 5 15.8A8.4 8.4 0 1 1 20.5 11.6Z"/><path d="M9 9.4c0 3 2.4 5.4 5.4 5.4"/></svg> Falar no WhatsApp</a>
-            <a class="btn btn--outline-dark" href="mailto:contato@chadarevian.adv.br"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.8" y="4.8" width="18.4" height="14.4" rx="2"/><path d="M3.4 6.4 12 12.9l8.6-6.5"/></svg> Enviar e-mail</a>
+            <a class="btn btn--brass" href="https://wa.me/5511925301848?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20registro%20de%20marca." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.2 7.5L3.5 20.5 5 15.8A8.4 8.4 0 1 1 20.5 11.6Z"/><path d="M9 9.4c0 3 2.4 5.4 5.4 5.4"/></svg> Falar no WhatsApp</a>
+            <a class="btn btn--outline-dark" href="mailto:contato@chadarevian.adv.br?subject=Registro%20de%20marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.8" y="4.8" width="18.4" height="14.4" rx="2"/><path d="M3.4 6.4 12 12.9l8.6-6.5"/></svg> Enviar e-mail</a>
           </div>
           <p class="art-cta__fine">Este texto tem finalidade informativa e não substitui a análise de um caso concreto. O envio de mensagem por estes canais não cria, por si só, relação advogado-cliente.</p>
+        </div>
+        <div class="related">
+          <h2>Leia também</h2>
+          <ul>
+          <li><a href="../registro-de-marca/"><strong>Registro de marca no INPI: etapas, prazos e taxas</strong><span>Como registrar marca no INPI: busca prévia, classes, depósito, oposição, prazos atuais e taxas oficiais. Atendimento em São Paulo e para todo o Brasil.</span></a></li>
+          <li><a href="quanto-tempo-demora-o-registro-de-marca.html"><strong>Quanto tempo demora o registro de marca no INPI</strong><span>Pedidos de marca sem oposição levam 18 a 19 meses até a decisão; com oposição, cerca de 34 meses. Veja os dados do INPI e do TCU e o que fazer enquanto espera.</span></a></li>
+          <li><a href="oposicao-e-uso-indevido-de-marca.html"><strong>Oposição e uso indevido de marca</strong><span>Alguém pediu no INPI uma marca parecida com a sua ou está usando a sua marca? Veja o prazo de oposição, a nulidade e os caminhos contra o uso indevido.</span></a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -257,93 +287,19 @@ retribuição suplementar. Depois disso, o registro se extingue.</p>
 </main>
 
 <footer class="ft">
-  <div class="wrap ft__in">
-    <p>© <span id="yr">2026</span> <strong>Tiago Chadarevian Advocacia</strong> &middot; OAB/SP 549.252</p>
-    <p>Av. Brigadeiro Faria Lima, 1811, Esc. 1119, São Paulo/SP</p>
-    <p><a href="../politica-de-privacidade.html">Política de privacidade</a></p>
+  <div class="wrap">
+    <div class="ft__in">
+      <p>© <span id="yr">2026</span> <strong>Tiago Chadarevian Sociedade Individual de Advocacia</strong> &middot; OAB/SP 70.291</p>
+      <p>Tiago Chadarevian, OAB/SP 549.252 &middot; Av. Brigadeiro Faria Lima, 1811, Esc. 1119, São Paulo/SP</p>
+    </div>
+    <nav class="ft__nav" aria-label="Links do rodapé">
+      <a href="../registro-de-marca/">Registro de marca</a>
+      <a href="../holding-familiar/">Holding familiar</a>
+      <a href="./">Artigos</a>
+      <a href="../politica-de-privacidade.html">Política de privacidade</a>
+    </nav>
   </div>
 </footer>
 
-<script>
-(function(){
-  var d = document, root = d.documentElement;
-  root.classList.add('js');
-
-  var yr = d.getElementById('yr');
-  if (yr) yr.textContent = new Date().getFullYear();
-
-  var hdr = d.getElementById('hdr'), ticking = false;
-  function onScroll(){
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(function(){
-      hdr.classList.toggle('scrolled', window.scrollY > 40);
-      ticking = false;
-    });
-  }
-  onScroll();
-  window.addEventListener('scroll', onScroll, {passive:true});
-
-  var nav = d.getElementById('nav'), burger = d.getElementById('burger');
-  function setMenu(open){
-    nav.classList.toggle('open', open);
-    burger.classList.toggle('open', open);
-    hdr.classList.toggle('menu-open', open);
-    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    burger.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
-  }
-  burger.addEventListener('click', function(){
-    setMenu(!nav.classList.contains('open'));
-  });
-  nav.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){ setMenu(false); });
-  });
-  d.addEventListener('keydown', function(e){
-    if (e.key === 'Escape') setMenu(false);
-  });
-  d.addEventListener('click', function(e){
-    if (!nav.classList.contains('open')) return;
-    if (!nav.contains(e.target) && !burger.contains(e.target)) setMenu(false);
-  });
-  window.addEventListener('resize', function(){
-    if (window.innerWidth > 860) setMenu(false);
-  });
-
-  var pending = [].slice.call(d.querySelectorAll('.reveal'));
-
-  pending.forEach(function(el){
-    var sibs = [].slice.call(el.parentNode.children).filter(function(n){
-      return n.classList && n.classList.contains('reveal');
-    });
-    var i = Math.min(Math.max(sibs.indexOf(el), 0), 5);
-    if (i > 0) el.style.transitionDelay = (i * 90) + 'ms';
-  });
-
-  var sweeping = false;
-  function sweep(){
-    if (sweeping) return;
-    sweeping = true;
-    requestAnimationFrame(function(){
-      var limit = window.innerHeight * 0.92;
-      pending = pending.filter(function(el){
-        if (el.getBoundingClientRect().top < limit){
-          el.classList.add('in');
-          return false;
-        }
-        return true;
-      });
-      sweeping = false;
-      if (!pending.length){
-        window.removeEventListener('scroll', sweep);
-        window.removeEventListener('resize', sweep);
-      }
-    });
-  }
-  sweep();
-  window.addEventListener('scroll', sweep, {passive:true});
-  window.addEventListener('resize', sweep);
-  window.addEventListener('load', sweep);
-})();
-</script>
 </body>
 </html>

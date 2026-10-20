@@ -2,8 +2,10 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<!-- Consent Mode v2: tudo negado por padrão (LGPD) -->
 <script>
+  document.documentElement.classList.add('js');
+  // Consent Mode v2: tudo negado por padrão (LGPD). A escolha do aviso de cookies vale para
+  // o Google Analytics e para a medição de conversões do Google Ads (sem personalização de anúncios).
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('consent', 'default', {
@@ -12,12 +14,17 @@
     'ad_personalization': 'denied',
     'analytics_storage': 'denied'
   });
+  gtag('set', 'ads_data_redaction', true);
   (function(){
     try {
       var c = JSON.parse(localStorage.getItem('tc-consent'));
-      if (c && c.v === 1 && c.analytics === 'granted' && typeof c.ts === 'number' &&
+      if (c && c.v === 2 && c.analytics === 'granted' && typeof c.ts === 'number' &&
           c.ts <= Date.now() && Date.now() - c.ts < 31536e6) {
-        gtag('consent', 'update', {'analytics_storage': 'granted'});
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted',
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted'
+        });
       }
     } catch (e) {}
   })();
@@ -30,28 +37,41 @@
   gtag('js', new Date());
   gtag('config', 'G-N5ERXBJJ00');
 </script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Política de privacidade | Tiago Chadarevian, advogado</title>
-<meta name="description" content="Como o site chadarevian.adv.br trata dados pessoais, quando usa cookies do Google Analytics e como exercer os seus direitos previstos na LGPD.">
-<meta name="theme-color" content="#0f2440">
-<link rel="icon" href="assets/logo.png">
-<meta property="og:title" content="Política de privacidade | Tiago Chadarevian, advogado">
-<meta property="og:description" content="Como o site chadarevian.adv.br trata dados pessoais, quando usa cookies do Google Analytics e como exercer os seus direitos previstos na LGPD.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://chadarevian.adv.br/politica-de-privacidade.html">
-<meta property="og:locale" content="pt_BR">
+<meta name="description" content="Como o site chadarevian.adv.br trata dados pessoais, quando usa cookies do Google Analytics e do Google Ads e como exercer os seus direitos na LGPD.">
 <link rel="canonical" href="https://chadarevian.adv.br/politica-de-privacidade.html">
 <link rel="alternate" hreflang="pt-BR" href="https://chadarevian.adv.br/politica-de-privacidade.html">
 <link rel="alternate" hreflang="en" href="https://chadarevian.adv.br/en/privacy-policy.html">
-<link rel="stylesheet" href="assets/estilo.css">
-<link rel="stylesheet" href="assets/cookies.css">
-<script src="assets/cookies.js" defer></script>
+<meta name="theme-color" content="#0f2440">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:site_name" content="Tiago Chadarevian">
+<meta property="og:title" content="Política de privacidade | Tiago Chadarevian, advogado">
+<meta property="og:description" content="Como o site chadarevian.adv.br trata dados pessoais, quando usa cookies do Google Analytics e do Google Ads e como exercer os seus direitos na LGPD.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://chadarevian.adv.br/politica-de-privacidade.html">
+<meta property="og:image" content="https://chadarevian.adv.br/assets/og/inicio.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Política de privacidade | Tiago Chadarevian, advogado">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/playfair-display-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/estilo.css?v=20261020">
+<script src="assets/cookies.js?v=20261020" defer></script>
+<script src="assets/site.js?v=20261020" defer></script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebPage","@id":"https://chadarevian.adv.br/politica-de-privacidade.html","url":"https://chadarevian.adv.br/politica-de-privacidade.html","name":"Política de privacidade","inLanguage":"pt-BR","dateModified":"2026-10-20","isPartOf":{"@type":"WebSite","@id":"https://chadarevian.adv.br/#site","name":"Tiago Chadarevian","url":"https://chadarevian.adv.br/"},"publisher":{"@id":"https://chadarevian.adv.br/#escritorio"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://chadarevian.adv.br/"},{"@type":"ListItem","position":2,"name":"Política de privacidade","item":"https://chadarevian.adv.br/politica-de-privacidade.html"}]}]</script>
 </head>
 <body>
 
 <header class="hdr" id="hdr">
   <div class="hdr__in">
-    <a class="brand" href="index.html" aria-label="Tiago Chadarevian, Advogado">
+    <a class="brand" href="./" aria-label="Tiago Chadarevian, Advogado">
       <img class="on-dark" src="assets/logo-clara.png" alt="Tiago Chadarevian Advogado" width="556" height="94">
       <img class="on-light" src="assets/logo.png" alt="" aria-hidden="true" width="556" height="94">
     </a>
@@ -59,11 +79,11 @@
       <span></span><span></span><span></span>
     </button>
     <nav class="nav" id="nav">
-      <a href="index.html#areas">Áreas de Atuação</a>
-      <a href="index.html#sobre">Sobre</a>
-      <a href="index.html#formacao">Formação</a>
-      <a href="artigos/index.html">Artigos</a>
-      <a href="index.html#contato">Contato</a>
+      <a href="./#areas">Áreas de Atuação</a>
+      <a href="./#sobre">Sobre</a>
+      <a href="./#formacao">Formação</a>
+      <a href="artigos/">Artigos</a>
+      <a href="./#contato">Contato</a>
       <a href="https://wa.me/5511925301848" target="_blank" rel="noopener">Fale no WhatsApp</a>
       <div class="lang" role="group" aria-label="Idioma do site">
         <span class="is-on" aria-current="true">PT</span>
@@ -79,14 +99,14 @@
     <div class="wrap">
       <div class="art-hero__in">
         <nav class="crumb" aria-label="Você está em">
-          <a href="index.html">Início</a>
+          <a href="./">Início</a>
           <span aria-hidden="true">/</span>
           <span>Política de privacidade</span>
         </nav>
         <h1>Política de privacidade</h1>
         <p class="art-lead">Como este site trata dados pessoais, quando usa cookies e como você pode exercer os seus direitos previstos na Lei Geral de Proteção de Dados (LGPD).</p>
         <div class="art-meta">
-          <span>Última atualização: 8 de outubro de 2026</span>
+          <span>Última atualização: 20 de outubro de 2026</span>
         </div>
       </div>
     </div>
@@ -119,15 +139,21 @@ link), tipo de dispositivo, navegador, sistema operacional, idioma e localizaç�
 (cidade ou região), além de um identificador aleatório guardado em cookie. Esses dados não
 incluem o seu nome, e-mail ou telefone.</p>
 
-<p><strong>Antes da sua escolha, ou se você recusar,</strong> nenhum cookie do Google Analytics é
-gravado no seu navegador. O código do Google continua carregado em modo restrito (modo de
+<p><strong>Antes da sua escolha, ou se você recusar,</strong> nenhum cookie do Google Analytics ou do Google Ads é gravado no seu navegador. O código do Google continua carregado em modo restrito (modo de
 consentimento) e pode enviar ao Google sinais técnicos sem cookies e sem identificadores
-persistentes, como a página visitada, a data e a hora do acesso, o tipo de navegador e a página
-de origem. Como em qualquer conexão pela internet, o endereço IP do seu dispositivo também é
+persistentes, como a página visitada, a data e a hora do acesso, o tipo de navegador, a página de origem e
+os cliques nos botões de contato. Como em qualquer conexão pela internet, o endereço IP do seu dispositivo também é
 transmitido.</p>
 
-<p><strong>Contato por e-mail ou WhatsApp.</strong> Os botões de contato apenas abrem o seu
-programa de e-mail ou o WhatsApp; o site não tem formulários e não coleta essas informações. Os
+<p><strong>Medição de anúncios do Google Ads, somente com o seu consentimento.</strong> O escritório
+pode anunciar no Google. Quando você chega ao site por um desses anúncios, o endereço da página traz
+um identificador do clique, criado pelo Google. Se você aceitar os cookies, esse identificador e o
+registro de que houve um contato, como um clique nos botões de WhatsApp ou de e-mail, são usados para
+medir, de forma agregada, quantos contatos os anúncios geraram (a chamada medição de conversões). O
+site não faz remarketing e não usa esses dados para personalizar anúncios.</p>
+
+<p><strong>Contato por e-mail ou WhatsApp.</strong> Os botões de contato apenas abrem o seu programa de e-mail ou o WhatsApp. O site registra
+que o botão foi clicado, mas não tem formulários e não coleta o conteúdo das mensagens. Os
 dados que você enviar por esses canais (como nome, contato e informações sobre o seu caso) são
 usados para responder à sua mensagem e, se for o caso, avaliar e formalizar a contratação, e
 ficam protegidos pelo sigilo profissional. As mensagens de WhatsApp também são tratadas pela
@@ -139,14 +165,18 @@ que registra esses endereços para fins de segurança, independentemente de cook
 
 <h2>4. Cookies e armazenamento local</h2>
 
-<p>Este site não usa cookies de publicidade. Os únicos cookies são os do Google Analytics,
-gravados apenas se você aceitar:</p>
+<p>Os cookies deste site são os do Google Analytics e os do Google Ads, gravados apenas se você
+aceitar:</p>
 
 <ul>
   <li><code>_ga</code>: distingue visitantes por meio de um identificador aleatório. Validade de
   2 anos, renovada a cada visita.</li>
   <li><code>_ga_N5ERXBJJ00</code>: mantém o estado da sessão. Validade de 2 anos, renovada a cada
   visita.</li>
+  <li><code>_gcl_au</code>: usado pelo Google Ads para relacionar o clique em um anúncio a um contato
+  feito pelo site. Validade de 90 dias, renovada a cada visita.</li>
+  <li><code>_gcl_aw</code>: guarda o identificador do clique quando você chega ao site por um anúncio.
+  Validade de 90 dias.</li>
 </ul>
 
 <p>Além disso, o site guarda no armazenamento local do seu navegador (<code>localStorage</code>)
@@ -156,15 +186,17 @@ disso, o aviso aparece novamente.</p>
 
 <h2>5. Para que os dados são usados</h2>
 
-<p>Os dados do Google Analytics servem exclusivamente para gerar estatísticas agregadas de
-audiência, como quais artigos são mais lidos e de onde vêm os acessos, e assim melhorar o
-conteúdo e o funcionamento do site. Eles não são usados para publicidade, para criar perfis
-individuais nem para tomar decisões automatizadas sobre você.</p>
+<p>Os dados do Google Analytics servem para gerar estatísticas agregadas de audiência, como quais
+artigos são mais lidos e de onde vêm os acessos, e assim melhorar o conteúdo e o funcionamento do
+site. Com o seu consentimento, os dados do Google Analytics e do Google Ads também são usados para
+medir, de forma agregada, se os anúncios do escritório resultaram em contatos. Eles não são usados
+para remarketing, para personalizar anúncios, para criar perfis individuais nem para tomar decisões
+automatizadas sobre você.</p>
 
 <h2>6. Base legal</h2>
 
 <ul>
-  <li><strong>Google Analytics com cookies:</strong> consentimento (art. 7º, I, da LGPD). Você
+  <li><strong>Google Analytics e Google Ads com cookies:</strong> consentimento (art. 7º, I, da LGPD). Você
   pode recusá-lo sem perder o acesso ao site e revogá-lo a qualquer momento (art. 8º, § 5º).</li>
   <li><strong>Sinais técnicos sem cookies enviados antes da sua escolha e registros de acesso da
   hospedagem:</strong> legítimo interesse (art. 7º, IX, e art. 10), limitado aos dados
@@ -179,17 +211,17 @@ individuais nem para tomar decisões automatizadas sobre você.</p>
 
 <h2>7. Compartilhamento e transferência internacional</h2>
 
-<p>Os dados do Google Analytics são tratados pelo Google, que pode armazená-los e processá-los
-em servidores fora do Brasil, inclusive nos Estados Unidos, conforme os termos de proteção de
-dados que o Google aplica ao Google Analytics. Também podem ser processados fora do Brasil os
+<p>Os dados do Google Analytics e do Google Ads são tratados pelo Google, que pode armazená-los e
+processá-los em servidores fora do Brasil, inclusive nos Estados Unidos, conforme os termos de proteção
+de dados que o Google aplica a esses serviços. Também podem ser processados fora do Brasil os
 registros de acesso mantidos pelo GitHub, sediado nos Estados Unidos, e as mensagens de e-mail e
 de WhatsApp, que passam pelos servidores dos respectivos provedores. Não vendemos dados pessoais
 nem os compartilhamos com terceiros além dos mencionados nesta política.</p>
 
 <h2>8. Por quanto tempo os dados são mantidos</h2>
 
-<p>Os dados do Google Analytics vinculados a cookies e identificadores ficam retidos por no
-máximo 14 meses e depois são excluídos automaticamente; relatórios estatísticos agregados, que
+<p>Os dados do Google Analytics vinculados a cookies e identificadores ficam retidos por no máximo 14 meses e depois são excluídos automaticamente, e os cookies do
+Google Ads expiram em 90 dias; relatórios estatísticos agregados, que
 não identificam visitantes, podem ser mantidos por mais tempo. As mensagens recebidas por e-mail
 ou WhatsApp são guardadas pelo tempo necessário ao atendimento e, havendo contratação, pelos
 prazos legais aplicáveis.</p>
@@ -213,8 +245,8 @@ consentimento e apagar os cookies do navegador.</p>
 
 <h2>10. Como alterar a sua escolha</h2>
 
-<p>Você pode mudar a sua decisão a qualquer momento pelo botão abaixo. Ao recusar, os cookies do
-Google Analytics gravados por este site são apagados do seu navegador.</p>
+<p>Você pode mudar a sua decisão a qualquer momento pelo botão abaixo. Ao recusar, os cookies do Google Analytics e do Google Ads gravados por este site são apagados
+do seu navegador.</p>
 
 <div class="ck-prefs" id="ck-prefs" hidden>
   <p class="ck-prefs__st" id="ck-status" aria-live="polite"></p>
@@ -237,94 +269,19 @@ desativação do Google Analytics</a> oferecido pelo Google.</p>
 </main>
 
 <footer class="ft">
-  <div class="wrap ft__in">
-    <p>© <span id="yr">2026</span> <strong>Tiago Chadarevian Advocacia</strong> &middot; OAB/SP 549.252</p>
-    <p>Av. Brigadeiro Faria Lima, 1811, Esc. 1119, São Paulo/SP</p>
-    <p><a href="politica-de-privacidade.html" aria-current="page">Política de privacidade</a></p>
+  <div class="wrap">
+    <div class="ft__in">
+      <p>© <span id="yr">2026</span> <strong>Tiago Chadarevian Sociedade Individual de Advocacia</strong> &middot; OAB/SP 70.291</p>
+      <p>Tiago Chadarevian, OAB/SP 549.252 &middot; Av. Brigadeiro Faria Lima, 1811, Esc. 1119, São Paulo/SP</p>
+    </div>
+    <nav class="ft__nav" aria-label="Links do rodapé">
+      <a href="registro-de-marca/">Registro de marca</a>
+      <a href="holding-familiar/">Holding familiar</a>
+      <a href="artigos/">Artigos</a>
+      <a href="politica-de-privacidade.html" aria-current="page">Política de privacidade</a>
+    </nav>
   </div>
 </footer>
-
-<script>
-(function(){
-  var d = document, root = d.documentElement;
-  root.classList.add('js');
-
-  var yr = d.getElementById('yr');
-  if (yr) yr.textContent = new Date().getFullYear();
-
-  var hdr = d.getElementById('hdr'), ticking = false;
-  function onScroll(){
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(function(){
-      hdr.classList.toggle('scrolled', window.scrollY > 40);
-      ticking = false;
-    });
-  }
-  onScroll();
-  window.addEventListener('scroll', onScroll, {passive:true});
-
-  var nav = d.getElementById('nav'), burger = d.getElementById('burger');
-  function setMenu(open){
-    nav.classList.toggle('open', open);
-    burger.classList.toggle('open', open);
-    hdr.classList.toggle('menu-open', open);
-    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    burger.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
-  }
-  burger.addEventListener('click', function(){
-    setMenu(!nav.classList.contains('open'));
-  });
-  nav.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){ setMenu(false); });
-  });
-  d.addEventListener('keydown', function(e){
-    if (e.key === 'Escape') setMenu(false);
-  });
-  d.addEventListener('click', function(e){
-    if (!nav.classList.contains('open')) return;
-    if (!nav.contains(e.target) && !burger.contains(e.target)) setMenu(false);
-  });
-  window.addEventListener('resize', function(){
-    if (window.innerWidth > 860) setMenu(false);
-  });
-
-  var pending = [].slice.call(d.querySelectorAll('.reveal'));
-
-  pending.forEach(function(el){
-    var sibs = [].slice.call(el.parentNode.children).filter(function(n){
-      return n.classList && n.classList.contains('reveal');
-    });
-    var i = Math.min(Math.max(sibs.indexOf(el), 0), 5);
-    if (i > 0) el.style.transitionDelay = (i * 90) + 'ms';
-  });
-
-  var sweeping = false;
-  function sweep(){
-    if (sweeping) return;
-    sweeping = true;
-    requestAnimationFrame(function(){
-      var limit = window.innerHeight * 0.92;
-      pending = pending.filter(function(el){
-        if (el.getBoundingClientRect().top < limit){
-          el.classList.add('in');
-          return false;
-        }
-        return true;
-      });
-      sweeping = false;
-      if (!pending.length){
-        window.removeEventListener('scroll', sweep);
-        window.removeEventListener('resize', sweep);
-      }
-    });
-  }
-  sweep();
-  window.addEventListener('scroll', sweep, {passive:true});
-  window.addEventListener('resize', sweep);
-  window.addEventListener('load', sweep);
-})();
-</script>
 
 </body>
 </html>

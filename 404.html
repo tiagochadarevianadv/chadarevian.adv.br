@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>
+  document.documentElement.classList.add('js');
+  // Consent Mode v2: tudo negado por padrão (LGPD). A escolha do aviso de cookies vale para
+  // o Google Analytics e para a medição de conversões do Google Ads (sem personalização de anúncios).
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+  gtag('set', 'ads_data_redaction', true);
+  (function(){
+    try {
+      var c = JSON.parse(localStorage.getItem('tc-consent'));
+      if (c && c.v === 2 && c.analytics === 'granted' && typeof c.ts === 'number' &&
+          c.ts <= Date.now() && Date.now() - c.ts < 31536e6) {
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted',
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted'
+        });
+      }
+    } catch (e) {}
+  })();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N5ERXBJJ00"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N5ERXBJJ00');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página não encontrada | Tiago Chadarevian, advogado</title>
+<meta name="description" content="A página procurada não foi encontrada no site chadarevian.adv.br.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0f2440">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/playfair-display-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/estilo.css?v=20261020">
+<script src="/assets/cookies.js?v=20261020" defer></script>
+<script src="/assets/site.js?v=20261020" defer></script>
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <div class="hdr__in">
+    <a class="brand" href="/" aria-label="Tiago Chadarevian, Advogado">
+      <img class="on-dark" src="/assets/logo-clara.png" alt="Tiago Chadarevian Advogado" width="556" height="94">
+      <img class="on-light" src="/assets/logo.png" alt="" aria-hidden="true" width="556" height="94">
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="/#areas">Áreas de Atuação</a>
+      <a href="/#sobre">Sobre</a>
+      <a href="/#formacao">Formação</a>
+      <a href="/artigos/">Artigos</a>
+      <a href="/#contato">Contato</a>
+      <a href="https://wa.me/5511925301848" target="_blank" rel="noopener">Fale no WhatsApp</a>
+      <div class="lang" role="group" aria-label="Idioma do site">
+        <span class="is-on" aria-current="true">PT</span>
+        <a href="/en/" hreflang="en" lang="en">EN</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="art-hero">
+    <div class="wrap">
+      <div class="art-hero__in">
+        <nav class="crumb" aria-label="Você está em">
+          <a href="/">Início</a>
+          <span aria-hidden="true">/</span>
+          <span>Erro 404</span>
+        </nav>
+        <h1>Página não encontrada</h1>
+        <p class="art-lead">O endereço pode ter mudado ou não existir mais. Os caminhos abaixo levam às partes principais do site.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="art-body">
+    <div class="wrap">
+      <div class="prose">
+        <div class="related related--solo">
+          <ul>
+            <li><a href="/"><strong>Página inicial</strong><span>Áreas de atuação, formação e contato.</span></a></li>
+            <li><a href="/registro-de-marca/"><strong>Registro de marca no INPI</strong><span>Etapas, prazos, taxas oficiais e como funciona o acompanhamento do pedido.</span></a></li>
+            <li><a href="/holding-familiar/"><strong>Holding familiar</strong><span>Como funciona, impostos em 2026 e quando vale a pena.</span></a></li>
+            <li><a href="/artigos/"><strong>Artigos</strong><span>Todos os textos publicados no site.</span></a></li>
+            <li><a href="/en/"><strong>English version</strong><span>Brazilian IP and corporate law, in English.</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft__in">
+      <p>© <span id="yr">2026</span> <strong>Tiago Chadarevian Sociedade Individual de Advocacia</strong> &middot; OAB/SP 70.291</p>
+      <p>Tiago Chadarevian, OAB/SP 549.252 &middot; Av. Brigadeiro Faria Lima, 1811, Esc. 1119, São Paulo/SP</p>
+    </div>
+    <nav class="ft__nav" aria-label="Links do rodapé">
+      <a href="/registro-de-marca/">Registro de marca</a>
+      <a href="/holding-familiar/">Holding familiar</a>
+      <a href="/artigos/">Artigos</a>
+      <a href="/politica-de-privacidade.html">Política de privacidade</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

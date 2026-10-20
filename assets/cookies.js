@@ -1,19 +1,19 @@
-/* Aviso de cookies (LGPD) para o Google Analytics 4 com Consent Mode v2.
-   O padrão "negado" é definido no <head> de cada página, antes da tag do Google;
-   este arquivo exibe o aviso, guarda a escolha e atualiza o consentimento. */
+/* Aviso de cookies (LGPD) para o Google Analytics 4 e a medição de conversões do Google Ads,
+   com Consent Mode v2. O padrão "negado" é definido no <head> de cada página, antes da tag do
+   Google; este arquivo exibe o aviso, guarda a escolha e atualiza o consentimento. */
 (function () {
   'use strict';
 
   // VERSION e MAX_AGE se repetem no script de consentimento do <head> de cada página
-  // ("c.v === 1" e "31536e6"): ao mudar aqui, mude lá também, em todas as páginas.
+  // ("c.v === 2" e "31536e6"): ao mudar aqui, mude lá também, em todas as páginas.
   var KEY = 'tc-consent';                   // registro da escolha no localStorage
-  var VERSION = 1;                          // aumentar faz o aviso aparecer de novo
+  var VERSION = 2;                          // aumentar faz o aviso aparecer de novo
   var MAX_AGE = 365 * 24 * 60 * 60 * 1000;  // a escolha vale por 12 meses
-  // Ao aceitar, libera só o Analytics: o aviso e a política não tratam de publicidade.
-  // Se um dia usar Google Ads, inclua ad_storage, ad_user_data e ad_personalization
-  // aqui e atualize o texto do aviso e a política de privacidade.
-  var GRANTED = { analytics_storage: 'granted' };
-  var DENIED = { analytics_storage: 'denied' };
+  // Ao aceitar, libera o Analytics e a medição de conversões do Google Ads.
+  // ad_personalization continua negado: o site não faz remarketing nem personaliza anúncios.
+  // Se isso mudar, atualize também o texto do aviso e a política de privacidade.
+  var GRANTED = { analytics_storage: 'granted', ad_storage: 'granted', ad_user_data: 'granted' };
+  var DENIED = { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied' };
 
   var doc = document;
   var root = doc.documentElement;
@@ -23,24 +23,24 @@
   var T = en ? {
     region: 'Cookie notice',
     title: 'Cookies',
-    text: 'We use Google Analytics cookies to understand, in aggregate, how this site is used. They are only enabled if you accept.',
+    text: 'We use Google Analytics and Google Ads cookies to understand, in aggregate, how this site is used and whether our ads lead to contacts. They are only enabled if you accept.',
     link: 'Privacy policy',
     policy: '../en/privacy-policy.html',
     deny: 'Decline',
     accept: 'Accept',
-    granted: 'Your current choice: Google Analytics cookies accepted.',
-    denied: 'Your current choice: Google Analytics cookies declined.',
+    granted: 'Your current choice: Google Analytics and Google Ads cookies accepted.',
+    denied: 'Your current choice: Google Analytics and Google Ads cookies declined.',
     none: 'You have not made a choice yet.'
   } : {
     region: 'Aviso de cookies',
     title: 'Cookies',
-    text: 'Usamos cookies do Google Analytics para entender, de forma agregada, como o site é utilizado. Eles só são ativados se você aceitar.',
+    text: 'Usamos cookies do Google Analytics e do Google Ads para entender, de forma agregada, como o site é usado e se os anúncios geram contatos. Eles só são ativados se você aceitar.',
     link: 'Política de privacidade',
     policy: '../politica-de-privacidade.html',
     deny: 'Recusar',
     accept: 'Aceitar',
-    granted: 'Sua escolha atual: cookies do Google Analytics aceitos.',
-    denied: 'Sua escolha atual: cookies do Google Analytics recusados.',
+    granted: 'Sua escolha atual: cookies do Google Analytics e do Google Ads aceitos.',
+    denied: 'Sua escolha atual: cookies do Google Analytics e do Google Ads recusados.',
     none: 'Você ainda não fez uma escolha.'
   };
 
@@ -66,12 +66,13 @@
     } catch (e) { /* armazenamento bloqueado: a escolha vale só para esta página */ }
   }
 
-  // Apaga os cookies do Google Analytics (_ga, _ga_<ID>) no domínio atual e nos superiores.
+  // Apaga os cookies do Google Analytics (_ga, _ga_<ID>) e do Google Ads (_gcl_*)
+  // no domínio atual e nos superiores.
   function clearCookies() {
     var names = doc.cookie.split(';').map(function (c) {
       return c.split('=')[0].trim();
     }).filter(function (n) {
-      return /^_ga($|_)|^_gid$|^_gat/.test(n);
+      return /^_ga($|_)|^_gid$|^_gat|^_gcl_/.test(n);
     });
     if (!names.length) return;
     var parts = location.hostname.split('.');

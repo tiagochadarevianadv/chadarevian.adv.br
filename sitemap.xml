@@ -3,63 +3,95 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://chadarevian.adv.br/</loc>
-    <lastmod>2026-10-08</lastmod>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://chadarevian.adv.br/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://chadarevian.adv.br/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://chadarevian.adv.br/"/>
-  </url>
-  <url>
-    <loc>https://chadarevian.adv.br/en/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://chadarevian.adv.br/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://chadarevian.adv.br/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chadarevian.adv.br/"/>
   </url>
   <url>
     <loc>https://chadarevian.adv.br/artigos/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://chadarevian.adv.br/artigos/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://chadarevian.adv.br/en/articles/"/>
   </url>
   <url>
+    <loc>https://chadarevian.adv.br/registro-de-marca/</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://chadarevian.adv.br/holding-familiar/</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://chadarevian.adv.br/artigos/quanto-tempo-demora-o-registro-de-marca.html</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://chadarevian.adv.br/artigos/oposicao-e-uso-indevido-de-marca.html</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://chadarevian.adv.br/artigos/como-saber-se-a-marca-esta-livre.html</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://chadarevian.adv.br/artigos/como-abrir-uma-holding-familiar.html</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://chadarevian.adv.br/artigos/holding-familiar-e-reforma-tributaria.html</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://chadarevian.adv.br/artigos/desvantagens-da-holding-patrimonial.html</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
     <loc>https://chadarevian.adv.br/artigos/registro-de-marca-estrangeira-no-brasil.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://chadarevian.adv.br/artigos/registro-de-marca-estrangeira-no-brasil.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://chadarevian.adv.br/en/articles/trademark-registration-brazil-foreign-companies.html"/>
   </url>
   <url>
     <loc>https://chadarevian.adv.br/artigos/exclusao-de-socio-em-sociedade-limitada.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://chadarevian.adv.br/artigos/exclusao-de-socio-em-sociedade-limitada.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://chadarevian.adv.br/en/articles/removing-a-shareholder-brazilian-limitada.html"/>
   </url>
   <url>
+    <loc>https://chadarevian.adv.br/politica-de-privacidade.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://chadarevian.adv.br/politica-de-privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chadarevian.adv.br/en/privacy-policy.html"/>
+  </url>
+  <url>
+    <loc>https://chadarevian.adv.br/en/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://chadarevian.adv.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chadarevian.adv.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chadarevian.adv.br/"/>
+  </url>
+  <url>
     <loc>https://chadarevian.adv.br/en/articles/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://chadarevian.adv.br/en/articles/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://chadarevian.adv.br/artigos/"/>
   </url>
   <url>
     <loc>https://chadarevian.adv.br/en/articles/trademark-registration-brazil-foreign-companies.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://chadarevian.adv.br/en/articles/trademark-registration-brazil-foreign-companies.html"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://chadarevian.adv.br/artigos/registro-de-marca-estrangeira-no-brasil.html"/>
   </url>
   <url>
     <loc>https://chadarevian.adv.br/en/articles/removing-a-shareholder-brazilian-limitada.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://chadarevian.adv.br/en/articles/removing-a-shareholder-brazilian-limitada.html"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://chadarevian.adv.br/artigos/exclusao-de-socio-em-sociedade-limitada.html"/>
   </url>
   <url>
-    <loc>https://chadarevian.adv.br/politica-de-privacidade.html</loc>
-    <lastmod>2026-10-08</lastmod>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://chadarevian.adv.br/politica-de-privacidade.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://chadarevian.adv.br/en/privacy-policy.html"/>
-  </url>
-  <url>
     <loc>https://chadarevian.adv.br/en/privacy-policy.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://chadarevian.adv.br/en/privacy-policy.html"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://chadarevian.adv.br/politica-de-privacidade.html"/>
   </url>
