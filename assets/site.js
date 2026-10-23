@@ -73,6 +73,62 @@
   window.addEventListener('resize', sweep);
   window.addEventListener('load', sweep);
 
+  // Barra de contato fixa (só no celular, pelo CSS): aparece quando os botões do topo saem da
+  // tela e some quando a chamada do fim do texto ou o rodapé aparecem, para não repetir botões.
+  var bar = d.getElementById('sticky-cta');
+  if (bar && 'IntersectionObserver' in window) {
+    var topCta = d.querySelector('.art-hero .hero__cta, .hero .hero__cta');
+    var topVisible = !!topCta, seen = {};
+    var upd = function () {
+      var endVisible = Object.keys(seen).some(function (k) { return seen[k]; });
+      bar.classList.toggle('is-on', !topVisible && !endVisible);
+    };
+    if (topCta) {
+      new IntersectionObserver(function (es) {
+        topVisible = es[es.length - 1].isIntersecting; upd();
+      }).observe(topCta);
+    }
+    var endObs = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { seen[e.target.getAttribute('data-end')] = e.isIntersecting; });
+      upd();
+    });
+    [].slice.call(d.querySelectorAll('.art-cta, .ft')).forEach(function (el, i) {
+      el.setAttribute('data-end', 'e' + i);
+      endObs.observe(el);
+    });
+    upd();
+  }
+
+  // Visita vinda de anúncio do Google (gclid, gbraid, wbraid ou gad_source no endereço desta página
+  // ou da página anterior do próprio site; ou cookie do Google Ads, que só existe com consentimento):
+  // a mensagem pronta do WhatsApp passa a dizer "Vim pelo Google" em vez de "Vim pelo site". Assim os
+  // contatos gerados pelos anúncios podem ser contados na própria conversa, inclusive os de quem não
+  // aceitou cookies. Nada é gravado no aparelho do visitante.
+  var AD = /[?&](gclid|gbraid|wbraid|gad_source)=|[?&]utm_medium=(cpc|ppc|paid)(&|$)/i;
+  var fromAd = AD.test(location.search);
+  if (!fromAd && d.referrer) {
+    try {
+      var ref = new URL(d.referrer);
+      fromAd = ref.origin === location.origin && AD.test(ref.search);
+    } catch (err) {}
+  }
+  if (!fromAd) fromAd = /(?:^|;\s*)_gcl_(?:aw|gb)=/.test(d.cookie);
+  if (fromAd) {
+    [].slice.call(d.querySelectorAll('a[href^="https://wa.me/"]')).forEach(function (a) {
+      var h = a.getAttribute('href'), i = h.indexOf('?text='), t;
+      if (i < 0) {
+        t = en ? 'Hello! I found you on Google and would like to get in touch.'
+          : 'Olá! Vim pelo Google e gostaria de falar com o escritório.';
+        a.setAttribute('href', h + '?text=' + encodeURIComponent(t));
+      } else {
+        t = decodeURIComponent(h.slice(i + 6))
+          .replace('Vim pelo site', 'Vim pelo Google')
+          .replace('I found your website', 'I found you on Google');
+        a.setAttribute('href', h.slice(0, i) + '?text=' + encodeURIComponent(t));
+      }
+    });
+  }
+
   // Medição de contatos: cada clique em WhatsApp, e-mail ou telefone gera o evento
   // "generate_lead" no Google Analytics 4, que pode ser importado como conversão no Google Ads.
   // Sem consentimento, o Consent Mode envia apenas um sinal sem cookies.
@@ -84,9 +140,11 @@
     else if (/^mailto:/i.test(h)) via = 'email';
     else if (/^tel:/i.test(h)) via = 'telefone';
     if (!via) return;
-    var place = a.closest('.hdr') ? 'cabecalho'
+    var place = a.closest('.sticky-cta') ? 'barra-fixa'
+      : a.closest('.hdr') ? 'cabecalho'
       : a.closest('.hero, .art-hero') ? 'topo'
       : a.closest('.art-cta, .cbox, .contact') ? 'chamada'
+      : a.closest('.cta-inline') ? 'meio-do-texto'
       : a.closest('.ft') ? 'rodape' : 'texto';
     window.gtag('event', 'generate_lead', {
       lead_source: via,

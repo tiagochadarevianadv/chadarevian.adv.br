@@ -854,6 +854,9 @@ a.cl__v:hover{color:var(--brass-light);}
 
 .related{margin-top:clamp(46px,5vw,64px);max-width:69ch;}
 .related--solo{margin-top:0;}
+/* Botão dourado um pouco mais escuro: texto branco com contraste mínimo de 4,5:1 (antes 3,96:1) */
+.btn--brass{background:var(--brass-deep);border-color:var(--brass-deep);}
+.btn--brass:hover{background:#76582f;border-color:#76582f;}
 .faq__i .faq__q{font-size:1.08rem;margin:0 0 .45em;}
 .prose .related h2{border:0;padding:0;margin:0 0 .8em;font-size:clamp(1.2rem,1.8vw,1.4rem);}
 .prose .related ul{margin:0;border-top:1px solid var(--line);}
@@ -868,7 +871,44 @@ a.cl__v:hover{color:var(--brass-light);}
 .related a span{display:block;font-size:.92rem;line-height:1.55;color:var(--ink-mute);}
 .related a:hover strong{color:var(--brass-deep);}
 
+.art-hero .hero__note{margin:14px 0 0;font-size:12.5px;line-height:1.5;color:rgba(255,255,255,.62);}
+
+.cta-inline{
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px 24px;
+  margin:2.2em 0;padding:20px 24px;
+  background:var(--paper-2);border:1px solid var(--line);border-left:2px solid var(--brass);
+}
+.prose .cta-inline p{margin:0;flex:1 1 300px;font-size:.97rem;}
+
+/* Barra de contato fixa no celular: aparece depois que os botões do topo saem da tela */
+.sticky-cta{display:none;}
+@media (max-width:860px){
+  .sticky-cta{
+    position:fixed;left:0;right:0;bottom:0;z-index:80;
+    display:flex;align-items:center;gap:10px;
+    padding:10px var(--gut) calc(10px + env(safe-area-inset-bottom));
+    background:rgba(252,251,248,.97);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    border-top:1px solid var(--line);box-shadow:0 -12px 30px -20px rgba(15,36,64,.4);
+    transform:translateY(110%);visibility:hidden;
+    transition:transform .35s var(--ease),visibility .35s;
+  }
+  .sticky-cta.is-on{transform:none;visibility:visible;}
+  .sticky-cta .btn{flex:1 1 auto;width:auto;padding:12px 18px;}
+  .sticky-cta__mail{
+    flex:0 0 48px;height:48px;display:grid;place-items:center;
+    background:#fff;border:1px solid var(--line);border-radius:2px;color:var(--navy-800);
+  }
+  .sticky-cta__mail svg{width:19px;height:19px;}
+  .ck-pad .sticky-cta{display:none;}
+}
+@media (prefers-reduced-motion:reduce){.sticky-cta{transition:none;}}
+
 @media (max-width:520px){
+  .ck{padding:12px var(--gut) calc(12px + env(safe-area-inset-bottom));font-size:12.5px;line-height:1.5;}
+  .ck .label{display:none;}
+  .ck__t{margin:0 0 10px;}
+  .ck__btn{padding:9px 12px;font-size:13px;}
   .tbl table{font-size:.88rem;}
   .tbl th,.tbl td{padding:10px 12px;}
   .art-more .btn{width:100%;}
